@@ -238,7 +238,7 @@ function handleNavbar() {
 }
 
 function transitionNavbar() {
-    const navbar = document.querySelector(".menuDisplay");
+    const navbar = document.querySelector(".navBarMenu");
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 250) {

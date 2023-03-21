@@ -43,16 +43,7 @@ img{
     display: block;
 }
 
-header {
-    height: var(--h-header);
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
-    width: 100% ;
-    position: fixed;
 
-    
-}
 
 .navBarMenu{
     display: flex;
@@ -62,9 +53,8 @@ header {
     justify-content: center;
     position: fixed;
     height:var(--h-header);
-    background-color: var(--container-color);
+    background-color: transparent;
     z-index: var(--z-header-nav);
-
 
 }
 
@@ -95,21 +85,19 @@ header {
 .iconsMenu {
     display: flex;
     cursor: pointer;
-    position: relative;
-    justify-content: flex-end;
-    padding: 0.5rem;
-    padding-left: 60rem;
+    padding-left: 17rem;
     flex-direction: row-reverse;
     gap: 0.5rem;
-    align-items: center;
+
+
 }
 
 .bxs-dashboard{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .bx-shopping-bag{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .amountArticles{
@@ -125,8 +113,8 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 30px;
-    top: 20px;
+    right: 155px;
+    top: 26px;
 }
 
 
@@ -138,17 +126,15 @@ a:link{
 
 
 a {
-
-
     display: flex;
     align-items: center;
     color: inherit;
+
 }
 
 li {
     text-decoration: none;
     list-style: none;
-    display: flex;
     color: inherit;
 }
 
@@ -427,12 +413,13 @@ padding: 2rem;
 
 .articleInfo{
     padding: 1rem;
+    padding-top: 3rem;
     background-color: var(--container-color);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     justify-content: center;
     border-radius: 0rem 0rem 1rem 1rem;
+    max-height: 100px;
 
 }
 
@@ -448,10 +435,13 @@ padding: 2rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     user-select: none;
+    margin-bottom: 30px;
 }
 
 .articleInfo p:nth-child(1){
     min-height: 54px;
+    gap: 0rem;
+    margin-bottom: -20px;
 }
 
 .bx-plus{
@@ -470,11 +460,8 @@ padding: 2rem;
     
     position: absolute;
     right: 4.5rem;
-    margin-top: -8rem;
-    
-    
-    
-    
+    margin-top: -8.5rem;
+
 }
 
 .bx-plus:hover{
@@ -626,34 +613,213 @@ footer ul {
     padding: 1rem 1rem 1rem 1rem;
 }
 
+
+
+
+/* -----------------------------------Media Query ------------------------*/
+
 @media (max-width: 700px) {
     .bagShow {
         width: 100%;
     }
-    .navBar__Active{
-        background-color: transparent;
-        height: calc(var(--h-header) +2rem);
+
+    .amountArticles{
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+        background-color: var(--title-color);
+        color: var(--container-color);
+        display: inline-block;
+        border-radius: 50%;
+    
         display: flex;
-        margin-left: -2rem 
-        }
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 61px;
+        top: 26px;
+    }
+
+    .HomeAndProducts{
+        display: none;
+    }
+
+
 }
+
+
 @media (min-width: 700px){
 
-    .bx-plus{
-    background-color: var(--container-color);
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: var(--title-color);
-    box-shadow: var(--shadow-general);
-    margin-bottom: 6rem;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+
+
+
+
+
+.bx-plus{
+background-color:var(--container-color);
+padding: 0.5rem;
+border-radius: 50%;
+font-size: 1.3rem;
+position: relative;
+width: 40px;
+height: 40px;
+left: 250px;
+top: -10px;
 
 }
+.HomeAndProducts{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+    right: 230px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+.container{
+    display: grid;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+        
+    .nameCollection{
+    padding-top: 1rem;
+    grid-column: 1 / 6 ;
+    grid-row: 2 / 3 ;
+    font-size: 50px;
+
+}
+
+.description{
+grid-column: 1 / 6 ;
+grid-row: 3 / 4 ;
+
+
+}
+
+.priceProduct{
+
+grid-column: 1 / 3 ;
+grid-row: 4 / 5 ;
+
+
+
+}
+
+.showMore{
+    grid-column: 1 / 4 ;
+    grid-row: 5 / 6 ;
+    background-color: var(--button-color);
+    color: var(--container-color);
+
+}
+        
+.hoddie{
+    grid-column: 6 / 7 ;
+    grid-row: 1 / 7 ;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--first-color);
+    width: 350px;
+
+}
+
+
+.articleInfo{
+    padding: 1rem;
+    
+    background-color: var(--container-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0rem 0rem 1rem 1rem;
+    max-height: 150px;
+    min-height: 100px;
+
+}
+
+.articleInfo span{
+    font-weight: normal;
+
+}
+
+.articleInfo .soldOut{
+    display: inline-block;
+    color: aliceblue;
+    background-color: var(--first-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    user-select: none;
+    gap: 1rem;
+
+}
+
+.articleInfo p:nth-child(1){
+    min-height: 100px;
+    margin-top: 40px;
+    gap: 1rem;
+}
+
+.articleInfo p:nth-child(2){
+    position: relative;
+    top: -40px;
+    margin-top: 1rem;
+    font-weight: bold;
+    
+
+}
+
+.navBarMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0rem 10rem 0rem 8rem;
+    
+
+    
+
+}
+
+.iconsMenu i{
+    display: flex;
+
+
+    
+}
+
+.iconsMenu .bxs-dashboard{
+    display: flex;
+    position: relative;
+    display: none;
+    
+}
+
+    
+}
+
+.navbarLogo {
+
+display: flex;
+
+
+
+}
+
+.navBar__Active{
+    background-color: var(--container-color);
+    box-shadow: var(--shadow-general);
+    transition: 0.5s;
+}
+
+.HomeAndProducts a:hover{
+    color: var(--first-color);
+}
+
+
+
 
 footer {
     display: flex;
@@ -662,18 +828,12 @@ footer {
 }
 
 
-
-.container{
-    display: grid;
-}
-
-}
-
 .repository{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
 
 
