@@ -20,6 +20,45 @@
 
 }
 
+body {
+    background-color: #ffffff;
+    color: var(--title-color);
+  }
+
+  .bxs-sun{
+    display: none;
+  }
+  
+  /* Estilos para el modo oscuro */
+  body.dark-mode {
+    background-color: #1f1f1f;
+    color: var(--container-color);
+  }
+
+  .article.dark-mode{
+    color: var(--title-color);
+    background-color: var(--text-color);
+  }
+
+  .menuDisplay.dark-mode{
+    color: var(--container-color);
+    background-color: var(--title-color);
+  }
+
+  .bxs-moon.dark-mode{
+    display: none;
+  }
+
+  .bxs-sun.dark-mode{
+    display: block;
+  }
+
+  .footer_page.dark-mode{
+    color: var(--title-color);
+  }
+
+
+
 *{
 margin: 0;
 padding: 0;
@@ -556,6 +595,8 @@ gap: 0.5rem;
         top: 26px;
     }
 
+   
+
     .HomeAndProducts{
         display: none;
     }
@@ -581,11 +622,16 @@ gap: 0.5rem;
 
 
 
+
 }
 
 
 @media (min-width: 700px){
 
+    .menuDisplay{
+        display: none;
+    }
+    
 
 .bx-plus{
 background-color:var(--container-color);
@@ -613,7 +659,6 @@ top: -100px;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-
 }
 
 
@@ -661,6 +706,8 @@ position: relative;
     color: var(--container-color);
 
 }
+
+
         
 
 

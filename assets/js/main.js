@@ -208,7 +208,7 @@ async function getMerchadise() {
     } else if (filter === "Shirt") {
       return articles.filter(article => article.category === "shirt");
     } else if (filter === "Hoddie") {
-      return articles.filter(article => article.category === "Hoddie");
+      return articles.filter(article => article.category === "hoddie");
     } else if (filter === "Sweater") {
       return articles.filter(article => article.category === "sweater");
     }
@@ -225,6 +225,17 @@ async function getMerchadise() {
         addToCartArticles(store);
       });
     });
+  }
+
+  function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+
+    const elements = document.querySelectorAll('.article, .menuDisplay, .bxs-sun, .bxs-moon, .footer_page');
+    elements.forEach(element =>{
+      element.classList.toggle('dark-mode')
+    })
+
   }
   
   async function init() {
